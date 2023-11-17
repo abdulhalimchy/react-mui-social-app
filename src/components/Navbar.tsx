@@ -9,11 +9,11 @@ import {
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import SearchInput from "./SearchInput.tsx";
 import MailIcon from "@mui/icons-material/Mail";
 import Notifications from "@mui/icons-material/Notifications";
 import { useState } from "react";
+import Diversity2Icon from "@mui/icons-material/Diversity2";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -45,40 +45,42 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Box sx={{ display: "flex" }} alignItems="center">
-          <FacebookIcon fontSize="large" />
+          <Diversity2Icon fontSize="medium" />
           <Typography
             variant="h5"
-            marginLeft={0.3}
+            marginLeft={1}
             sx={{
               display: { xs: "none", sm: "block" },
             }}
           >
-            Facebook
+            Remuidea
           </Typography>
         </Box>
-        <SearchInput />
-        <Icons>
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-          <Badge badgeContent={4} color="error">
-            <Notifications />
-          </Badge>
-          <Avatar
-            sx={{ width: 30, height: 30 }}
-            alt="Salman Chy"
-            src="https://mui.com/static/images/avatar/2.jpg"
-            onClick={() => setOpen(true)}
-          />
-        </Icons>
-        <UserBox onClick={() => setOpen(true)}>
-          <Avatar
-            sx={{ width: 30, height: 30 }}
-            alt="Salman Chy"
-            src="https://mui.com/static/images/avatar/2.jpg"
-          />
-          <Typography>Salman</Typography>
-        </UserBox>
+        <Box sx={{ display: "flex" }} alignItems="center">
+          <SearchInput />
+          <Icons>
+            <Badge badgeContent={4} color="error">
+              <MailIcon />
+            </Badge>
+            <Badge badgeContent={4} color="error">
+              <Notifications />
+            </Badge>
+            <Avatar
+              sx={{ width: 30, height: 30 }}
+              alt="Salman Chy"
+              src="https://mui.com/static/images/avatar/2.jpg"
+              onClick={() => setOpen(true)}
+            />
+          </Icons>
+          <UserBox onClick={() => setOpen(true)}>
+            <Avatar
+              sx={{ width: 30, height: 30 }}
+              alt="Salman Chy"
+              src="https://mui.com/static/images/avatar/2.jpg"
+            />
+            <Typography>Salman</Typography>
+          </UserBox>
+        </Box>
       </StyledToolbar>
       <Menu
         open={open}
