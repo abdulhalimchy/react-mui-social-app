@@ -17,7 +17,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 
-const Sidebar = () => {
+interface Props {
+  onChangeMode: () => void;
+}
+
+const Sidebar = ({ onChangeMode }: Props) => {
   return (
     <Box
       sx={{
@@ -97,7 +101,7 @@ const Sidebar = () => {
               <ListItemIcon>
                 <ModeNightIcon />
               </ListItemIcon>
-              <Switch />
+              <Switch onChange={onChangeMode} />
             </ListItemButton>
           </ListItem>
         </List>
