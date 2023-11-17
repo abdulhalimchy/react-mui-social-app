@@ -5,7 +5,7 @@ const RightBar = () => {
     <Box
       sx={{
         backgroundColor: "red",
-        display: { xs: "none", sm: "block", lg: "none" },
+        display: { xs: "none", sm: "block"},
       }}
       flex={2}
       p={2}
