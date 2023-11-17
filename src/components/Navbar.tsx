@@ -42,9 +42,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" color="info">
       <StyledToolbar>
-        <Box sx={{ display: "flex" }} alignItems="center">
+        <Box sx={{ display: "flex" }}>
           <Diversity2Icon fontSize="medium" />
           <Typography
             variant="h5"

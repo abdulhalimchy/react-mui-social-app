@@ -27,7 +27,7 @@ function App() {
       <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Sidebar onChangeMode={onChangeMode} />
+          <Sidebar mode={mode} onChangeMode={onChangeMode} />
           <Feed />
           <RightBar />
         </Stack>

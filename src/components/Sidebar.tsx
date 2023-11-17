@@ -5,6 +5,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  PaletteMode,
   Switch,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
@@ -18,10 +19,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 
 interface Props {
+  mode: PaletteMode;
   onChangeMode: () => void;
 }
 
-const Sidebar = ({ onChangeMode }: Props) => {
+const Sidebar = ({ mode, onChangeMode }: Props) => {
   return (
     <Box
       sx={{
@@ -101,7 +103,11 @@ const Sidebar = ({ onChangeMode }: Props) => {
               <ListItemIcon>
                 <ModeNightIcon />
               </ListItemIcon>
-              <Switch onChange={onChangeMode} />
+              <Switch
+                onChange={onChangeMode}
+                color="info"
+                checked={mode === "dark"}
+              />
             </ListItemButton>
           </ListItem>
         </List>

@@ -20,7 +20,7 @@ const RightBar = () => {
       p={2}
     >
       <Box position="fixed" width={300}>
-        <Typography variant="h6" fontWeight={100}>
+        <Typography variant="h6" fontWeight={100} mt={1} mb={1}>
           Online Friends
         </Typography>
         <AvatarGroup max={7}>
